@@ -1,0 +1,162 @@
+# Maven target directory
+/target/
+
+# Maven specific files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Eclipse IDE files
+.classpath
+.project
+.settings/
+.loadpath
+
+# IntelliJ IDEA files
+/.idea/
+/*.iml
+/*.iws
+
+# NetBeans IDE files
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code files
+/.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Log files
+logs/
+*.log
+*.log.*
+
+# Spring Boot artifacts
+/*.jar
+/*.war
+/*.ear
+
+# Environment files
+.env
+
+# Local database files
+*.h2.db
+*.mv.db
+
+# Temporary files
+/tmp/
+*.tmp
+*.swp
+*~
+
+# Class files
+*.class
+
+# Generated sources
+/generated-sources/
+/generated/
+
+/gwt/
+/gwt-unitCache/
+/gwt-report/
+
+# JRebel files
+/rebel.xml
+
+# JBoss Tools
+/.jboss-studio/
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Project files
+*.idea/
+*.ipr
+*.iws
+
+# Build directories
+/build/
+out/
+bin/
+
+# Coverage and test reports
+/coverage/
+.jacoco/
+/test-results/
+/surefire/
+
+# Dependency directories
+/dependency/
+/lib/
+/libs/
+
+# IntelliJ IDEA Module and Project Workspace files
+*.iml
+*.ipr
+*.iws
+
+# SonarQube files
+/.sonar/
+/.sonarqube/
+
+# Tool-specific files
+/mvnw
+/mvnw.cmd
+/.mvn/
+
+# Lombok generated files
+lombok.config
+
+# Application configuration files
+application.properties
+application.yml
+application-*.properties
+application-*.yml
+
+# Kubernetes and Docker files
+*.kubeconfig
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile
+
+# Static files
+/static/
+
+# Git Hooks
+/.git/hooks/
+
+# MacOS files
+.AppleDouble
+.LSOverride
+
+# Environment settings
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Others
+*.pid
+*.seed
+*.pid.lock
+
+application.yml
