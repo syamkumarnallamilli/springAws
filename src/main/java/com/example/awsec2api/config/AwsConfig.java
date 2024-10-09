@@ -7,6 +7,7 @@ import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.ec2.Ec2Client;
+import software.amazon.awssdk.services.sns.SnsClient;
 
 @Configuration
 public class AwsConfig {
@@ -24,6 +25,14 @@ public class AwsConfig {
     public Ec2Client ec2Client() {
         AwsBasicCredentials awsCredentials = AwsBasicCredentials.create(awsAccessKeyId, awsSecretKey);
         return Ec2Client.builder()
+                .region(Region.of(awsRegion))
+                .credentialsProvider(StaticCredentialsProvider.create(awsCredentials))
+                .build();
+    }
+    @Bean
+    public SnsClient snsClient() {
+        AwsBasicCredentials awsCredentials = AwsBasicCredentials.create(awsAccessKeyId, awsSecretKey);
+        return SnsClient.builder()
                 .region(Region.of(awsRegion))
                 .credentialsProvider(StaticCredentialsProvider.create(awsCredentials))
                 .build();
