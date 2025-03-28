@@ -62,4 +62,18 @@ public class EC2Service {
             throw new EC2Exception("Failed to retrieve active EC2 instances", e);
         }
     }
+    public void deleteVM(String instanceId) {
+        try {
+            TerminateInstancesRequest terminateRequest = TerminateInstancesRequest.builder()
+                    .instanceIds(instanceId)
+                    .build();
+    
+            ec2Client.terminateInstances(terminateRequest);
+            logger.info("Terminated EC2 instance with ID: {}", instanceId);
+        } catch (Ec2Exception e) {
+            logger.error("Error terminating EC2 instance: {}", e.getMessage());
+            throw new EC2Exception("Failed to terminate EC2 instance", e);
+        }
+    }
+    
 }

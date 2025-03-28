@@ -1,0 +1,8 @@
+```package com.example.awsec2api.config;```
+Package names and directory structure are closely related. 
+For example if a package name is college.staff.cse, then there are three directories, college, staffand cse such that cse is present in staff and staff is present inside college. Also, the directory college is accessible through CLASSPATH variable, i.e., path of parent directory of college is present in CLASSPATH. 
+The idea is to make sure that classes are easy to locate.
+
+```import org.springframework.beans.factory.annotation.Value;```
+What: This imports the @Value annotation from the Spring Framework. It is used to inject values into fields from properties files (e.g., application.properties or application.yml).
+Why: The @Value annotation is needed to load sensitive configuration data like AWS access keys and region from an external properties file, keeping them separate from the code.

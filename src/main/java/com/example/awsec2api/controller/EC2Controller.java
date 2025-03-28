@@ -34,4 +34,11 @@ public class EC2Controller {
         VMListResponse activeVMs = ec2Service.getActiveVMs();
         return ResponseEntity.ok(activeVMs);
     }
+
+    @DeleteMapping("/delete/{instanceId}")
+    @Operation(summary = "Delete an EC2 instance", description = "Terminates the specified EC2 instance")
+    public ResponseEntity<String> deleteVM(@PathVariable String instanceId) {
+        ec2Service.deleteVM(instanceId);
+        return ResponseEntity.ok("EC2 instance terminated successfully: " + instanceId);
+    }
 }
