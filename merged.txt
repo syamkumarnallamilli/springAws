@@ -242,7 +242,7 @@ public class EC2Service {
     public String createVM() {
         try {
             RunInstancesRequest runRequest = RunInstancesRequest.builder()
-                    .imageId("ami-0c55b159cbfafe1f0")
+                    .imageId("ami-0ebfd941bbafe70c6")
                     .instanceType(InstanceType.T2_MICRO)
                     .maxCount(1)
                     .minCount(1)
